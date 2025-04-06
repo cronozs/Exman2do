@@ -41,7 +41,7 @@ namespace Shooter
         public void endOleada()
         {
             RewardCanvas.enabled = true;
-            Time.timeScale = 0;
+            Time.timeScale = 0.01f;
         }
 
         public void UpdateOleada()

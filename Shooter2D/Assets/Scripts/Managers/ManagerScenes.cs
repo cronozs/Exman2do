@@ -7,6 +7,7 @@ namespace Shooter
         public void SceneChanger(int scene)
         {
             SceneManager.LoadScene(scene);
+            Time.timeScale = 1;
         }
     }
 }

@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Shooter
 {
     public class PlayerManager : MonoBehaviour
     {
+        [SerializeField] private Image hpImage;
+        [SerializeField] private Image escudoImage;
         private CoinManager _coinManager;
         private PlayerHP _playerHP;
         private PlayerGun _playerGun;
@@ -14,6 +17,14 @@ namespace Shooter
             _coinManager = FindObjectOfType<CoinManager>();
             _playerHP = FindObjectOfType<PlayerHP>();
             _playerGun = FindObjectOfType<PlayerGun>();
+        }
+
+        private void Update()
+        {
+            float normalHp = (float)(_playerHP.Life - 0) / (_playerHP.maxHP - 0);
+            float normalEscudo = (float)(_playerHP.Escudo- 0) / (_playerHP.maxEscudo - 0);
+            hpImage.fillAmount = normalHp;
+            escudoImage.fillAmount = normalEscudo;
         }
 
         public void ApplyUpgrade(int cost)
