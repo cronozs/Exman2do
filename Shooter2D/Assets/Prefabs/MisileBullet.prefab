@@ -144,6 +144,7 @@ MonoBehaviour:
   damage: 5
   oiginalSpeed: 2
   damgeTime: 5
+  damageRange: 0.2
 --- !u!50 &1177895942653817813
 Rigidbody2D:
   serializedVersion: 5

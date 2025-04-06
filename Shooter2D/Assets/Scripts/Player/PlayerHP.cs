@@ -63,12 +63,26 @@ namespace Shooter
             if(_escudo > 0)
             {
                 recibeDamage = true;
-                _escudo -= currentBullet.damage;
+                try
+                {
+                    _escudo -= currentBullet.damage;
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"se tuvo el siguiente error {e}");
+                }
             }
             else if(_escudo<= 0 && _life >0)
             {
                 recibeDamage = true;
-                _life -= currentBullet.damage;
+                try
+                {
+                    _life -= currentBullet.damage;
+                }
+                catch(Exception e)
+                {
+                    Debug.LogWarning($"se tuvo el siguiente error {e}");
+                }
             }
             if(_life <=0)
             {
