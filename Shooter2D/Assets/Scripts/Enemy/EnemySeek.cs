@@ -14,6 +14,10 @@ namespace Shooter
 
         private bool canShoot = true;
 
+        private void OnEnable()
+        {
+            canShoot = true;
+        }
 
         private void Start()
         {

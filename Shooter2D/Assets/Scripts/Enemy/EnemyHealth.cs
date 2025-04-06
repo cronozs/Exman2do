@@ -39,6 +39,7 @@ namespace Shooter
             else if(collision.gameObject.layer == 9)
             {
                 gameObject.SetActive(false);
+                Death();
             }
             if(health <= 0)
             {

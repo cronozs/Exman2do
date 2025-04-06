@@ -33,6 +33,7 @@ namespace Shooter
             {
                 _coinManager.coins -= cost;
                 _canExecute = true;
+                _coinManager.UpdateCanvas();
                 //Upgrade(upgrade);
             }
         }

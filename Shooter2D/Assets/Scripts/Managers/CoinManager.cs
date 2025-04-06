@@ -24,7 +24,7 @@ namespace Shooter
             UpdateCanvas();
         }
 
-        private void UpdateCanvas()
+        public void UpdateCanvas()
         {
             coinsText.text = coins.ToString();
         }
